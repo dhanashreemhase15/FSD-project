@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit form</title>
+</head>
+<body>
+    <h1>Edit form</h1>
+    <form method="POST" action="/edit/{{data.id}}">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="sname" value="{{data.name}}"/></td>
+            </tr>
+            <tr>
+                <td>Email ID:</td>
+                <td><input type="email" name="semail" value="{{data.email}}" /></td>
+            </tr>
+            <tr>
+                <td>Mobile:</td>
+                <td><input type="number" name="mob" value="{{data.mobile}}" /></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea cols="20" rows="5" name="adr" >{{data.address}}</textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Update" name="send" />
+                </td>
+            </tr>
+            
+        </table>
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student form</title>
+</head>
+<body>
+    <form method="POST" action="/create">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="sname" /></td>
+            </tr>
+            <tr>
+                <td>Email ID:</td>
+                <td><input type="email" name="semail" /></td>
+            </tr>
+            <tr>
+                <td>Mobile:</td>
+                <td><input type="number" name="mob" /></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea cols="20" rows="5" name="adr" ></textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Save" name="send" />
+                </td>
+            </tr>
+            
+        </table>
+
+    </form>
+    
+</body>
+</html>
